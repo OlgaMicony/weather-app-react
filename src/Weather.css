@@ -1,45 +1,10 @@
-body{
-    font-family: "Crimson Text", serif;
+.Weather {
+    padding: 20px;
+    border: 1px solid rgb(151, 74, 223);
+    border-radius: 30px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    color: #a685e2;
   }
   
-  h1{  
-    padding-top: 20px;
-    margin: 0 auto;    
-    font-size: 40px;
-    font-weight: 100;
-    line-height: 28px;    
-  }
-  
-  ul{
-    margin: 0;
-    padding: 0;
-  }
-  
-  li{   
-    list-style: none;    
-    font-size: medium;
-    font-weight: 600;     
-    margin: 0;
-    padding: 0;
-    line-height: 20px; 
-  }
-  
-  li::first-letter{
-    text-transform: capitalize; 
-  }
-  
-  .weather-container {   
-      max-width: 500px;
-      margin: 30px auto;
-      padding: 20px;
-      border: 1px solid rgb(151, 74, 223);
-      border-radius: 30px;
-      background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-      
-    }
-    
   .display-weather .active {
     color: #a685e2;
     cursor: default;
@@ -50,41 +15,41 @@ body{
   }
   
   img {
-      width: 50px;
-      display: block;
-    }
-    
+    width: 50px;
+    display: block;
+  }
+  
   .img-temp {
-      display: table-cell;
-      padding-top: 10px;
+    display: table-cell;
+    padding-top: 10px;
   }
   
-  .img-temp strong{     
-    font-size: 64px;  
-    font-weight: 400;  
-    line-height: 1;    
+  .img-temp strong {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
   }
   
-  .img-temp span{
+  .img-temp span {
     position: relative;
     font-size: 16px;
     top: -32px;
   }
   
   .img-temp img {
-      float: left;
-      margin-right: 10px;
-      width: 80px;
-      display: block;        
-      padding-left: 10px;
-      padding-right: 10px;
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-    
-  .weather-forecast{
+  
+  .weather-forecast {
     margin-top: 10px;
   }
   
-  .weather-forecast h3{
+  .weather-forecast h3 {
     font-size: 14px;
     font-weight: 400;
     text-align: center;
@@ -93,14 +58,14 @@ body{
     padding-top: 7px;
   }
   
-  .weather-forecast img{
+  .weather-forecast img {
     display: block;
     margin: 0 auto;
     height: 48px;
-    width: 48px;  
+    width: 48px;
   }
   
-  .weather-forecast-temp{
+  .weather-forecast-temp {
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -109,9 +74,8 @@ body{
     white-space: nowrap;
   }
   
+  .link {
+    margin: 0 auto;
+    padding: 10px;
+  }
   
-  
-  .link{
-      margin: 0 auto;   
-      padding: 10px;    
-    }

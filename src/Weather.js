@@ -1,80 +1,89 @@
 import React from "react";
 import "./Weather.css"
 
-export default function Weather (){
-    return(
-        
+export default function Weather() {
+    let weatherData = {
+      city: "Prague",
+      date: "Monday 14:26",
+      description: "Cloudly",
+      temperatute: 10,
+      imgUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+      precipitation: 1,
+      humidity: 56,
+      wind: 14
+    };
+  
+    return (
         <div className="weather-container">
           <div className="card">
-            <div className="card-body">
-              <form className="search-form">
-                <div className="row">
-                 <div className="col-6">
-                <input 
-                type="search" 
-                placeholder="Enter your city" 
+
+      <div className="Weather">
+        <form className="search-form">
+          <div className="row">
+            <div className="col-6">
+              <input
+                type="search"
+                placeholder="Enter your city"
                 autofocus="on"
                 autocomplete="off"
-                id="city-input"
-                className="form-control shadow sm" />
+                className="form-control shadow sm"
+              />
+            </div>
+            <div className="col-3">
+              <input
+                type="submit"
+                value="Search"
+                className="form-control btn btn-outline-primary w-100 shadow sm"
+              />
+            </div>
+            <div className="col-3">
+              <button
+                type="button"
+                className="btn btn-outline-success w-100 shadow sm"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1>{weatherData.city}</h1>
+        <ul>
+          <li className="date">{weatherData.date}</li>
+          <li>{weatherData.description}</li>
+        </ul>
+        <div className="row" id="display-weather">
+          <div className="col-7">
+            <div className="display-weather">
+              <div className="img-temp">
+                <img
+                  src={weatherData.imgUrl}
+                  alt={weatherData.description}
+                  id="icon"
+                />
+                <strong>{weatherData.temperatute}</strong>
+                <span className="units">
+                  <a href="/" class="active">
+                    ℃
+                  </a>{" "}
+                  |<a href="/"> ℉ </a>
+                </span>
               </div>
-                <div className="col-3">
-                    <input 
-                        type="submit"
-                        value="Search"
-                        className="form-control btn btn-outline-primary w-100 shadow sm"
-                        id="search"
-                    />
-                </div>
-                <div className="col-3">
-                    <button 
-                        type="button" 
-                        className="btn btn-outline-success w-100 shadow sm" 
-                        id="current">
-                        Current
-                    </button>
-              </div>
-              </div>
-              </form>
-              <h1 id="city">Prague</h1>
-                <ul>
-                  <li className="date">Monday 14:26</li>              
-                  <li id="current-weather">Cloudly</li>
-                </ul>       
-              <div className="row" id="display-weather">
-                <div className="col-7" >
-                  <div className="display-weather"> 
-                  <div className="img-temp">                              
-                      <img src="" alt="cloud" id="icon"/>
-                      <strong className="temp">10</strong> 
-                      <span className="units">
-                        <a href="#" id="celsius-link" className="active">℃</a> | 
-                        <a href="#" id="fahrenheit-link"> ℉ </a></span> 
-                    </div>
-                  </div>           
-                </div>
-                <div className="col-5" > 
-                  <ul>
-                  <li>             
-                  Precipitation: <span id="precipitation">1%</span>
-                </li>
-                <li>
-                  Humidity: <span id="humidity">56%</span>
-                </li>
-                <li>
-                  Wind: <span id="wind">14km/h</span>
-                </li>
-              </ul>
-                </div>
-                </div>
-                  
-                  <div className="row weather-forecast" id="forecast"></div>             
-                </div>
-              </div>          
-          <div className="link">
-            <a href="https://github.com/OlgaMicony/weather-app-react" target="_blank">Open-source code </a>by Olga Micony 
+            </div>
+          </div>
+          <div className="col-5">
+            <ul>
+              <li>Precipitation: {weatherData.precipitation}%</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind}km/h</li>
+            </ul>
           </div>
         </div>
-         
-    )
-}
+      </div>
+      <div className="link">
+            <a href="https://github.com/OlgaMicony/weather-app-react" target="_blank">Open-source code </a>by Olga Micony 
+          </div>
+      </div>
+      </div>
+    );
+  }
+
