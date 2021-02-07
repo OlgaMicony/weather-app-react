@@ -14,11 +14,8 @@ export default function Weather() {
     };
   
     return (
-        <div className="weather-container">
-          <div className="card">
-
-      <div className="Weather">
-        <form className="search-form">
+        <div className="Weather">
+            <form className="search-form">
           <div className="row">
             <div className="col-6">
               <input
@@ -78,12 +75,11 @@ export default function Weather() {
             </ul>
           </div>
         </div>
-      </div>
-      <div className="link">
+        <div className="link">
             <a href="https://github.com/OlgaMicony/weather-app-react" target="_blank">Open-source code </a>by Olga Micony 
           </div>
-      </div>
-      </div>
+      </div>          
+           
     );
   }
 
