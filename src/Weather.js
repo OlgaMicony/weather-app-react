@@ -76,7 +76,7 @@ export default function Weather() {
           </div>
         </div>
         <div className="link">
-            <a href="https://github.com/OlgaMicony/weather-app-react" target="_blank">Open-source code </a>by Olga Micony 
+            <a href="https://github.com/OlgaMicony/weather-app-react" target="_blank" rel="noreferrer">Open-source code </a>by Olga Micony 
           </div>
       </div>          
            
