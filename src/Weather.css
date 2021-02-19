@@ -16,12 +16,17 @@
     text-decoration: none;
   }
   
-  img {
-    width: 50px;
-    display: block;
+  .img-temp canvas { 
+     
+    margin-right: 5px;    
+    display: inline-block;
   }
   
   .img-temp {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 400;
     display: table-cell;
     padding-top: 10px;
   }
