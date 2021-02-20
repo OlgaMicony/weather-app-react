@@ -7,15 +7,6 @@
     width: 50%;
   }
   
-  .display-weather .active {
-    color: #a685e2;
-    cursor: default;
-  }
-  
-  .display-weather .active:hover {
-    text-decoration: none;
-  }
-  
   .img-temp canvas { 
      
     margin-right: 5px;    
@@ -30,28 +21,7 @@
     display: table-cell;
     padding-top: 10px;
   }
-  
-  .img-temp strong {
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 1;
-  }
-  
-  .img-temp span {
-    position: relative;
-    font-size: 16px;
-    top: -32px;
-  }
-  
-  .img-temp img {
-    float: left;
-    margin-right: 10px;
-    width: 80px;
-    display: block;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
+    
   .weather-forecast {
     margin-top: 10px;
   }
