@@ -1,0 +1,17 @@
+.temperature{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 400px;
+    margin-left: 10px;
+    color: #000;
+}
+
+.unit{
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    line-height: 1;
+    top: -32px;
+    margin-left: 5px;
+}
