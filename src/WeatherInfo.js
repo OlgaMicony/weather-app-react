@@ -2,12 +2,14 @@ import React from "react";
 import CurrentDate from "./CurrentDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css"
+
 
 
 export default function WeatherInfo(props){
     return (
         <div className="WeatherInfo">
-        <h1>{props.data.city}</h1>
+        <h1>{props.data.city},{props.data.country}</h1>
         <ul>
           <li className="date">
             <CurrentDate date={props.data.date}/>
@@ -29,9 +31,9 @@ export default function WeatherInfo(props){
           </div>
           <div className="col-6">
             <ul>
-              <li>Precipitation: {props.data.precipitation}%</li>
-              <li>Humidity: {props.data.humidity}%</li>
-              <li>Wind: {Math.round(props.data.wind)}km/h</li>
+              <li>Feels like: <span>{Math.round(props.data.precipitation)}℃</span></li>
+              <li>Humidity: <span>{props.data.humidity}%</span></li>
+              <li>Wind: <span>{Math.round(props.data.wind)}km/h</span></li>
             </ul>
           </div>
         </div> 

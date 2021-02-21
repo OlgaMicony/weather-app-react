@@ -2,6 +2,7 @@
   text-align: center;
   margin: 20px 0;
   color: black;
+  font-weight: bold;
 }
 
 .WeatherForecast canvas{

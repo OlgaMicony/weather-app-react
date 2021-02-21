@@ -9,18 +9,21 @@ export default function Weather(props) {
   
   const[weatherData, setWeatherData]= useState({ready:false}); 
   const[city, setCity]=useState(props.defaultCity)
-  function handleResponse(response){
+  function handleResponse(response){    
       
       setWeatherData({
           ready: true,
           temperature: response.data.main.temp,
           city: response.data.name,
-          precipitation: 1,
+          country: response.data.sys.country,
+          precipitation: response.data.main.feels_like,
           humidity: response.data.main.humidity,
           wind: response.data.wind.speed,
           icon:response.data.weather[0].icon,
           description: response.data.weather[0].description,
-          date: new Date(response.data.dt*1000)
+          date: new Date(response.data.dt*1000),
+          lat: response.data.coord.lat,
+          lon: response.data.coord.lon
       })
          
     }
@@ -38,6 +41,19 @@ export default function Weather(props) {
 
     function handleCityChange(event){
       setCity(event.target.value)
+    }
+
+    function showPosition(position) {    
+      const apiPositionKey = "1485caf947c0e72e759dc557efc47cd5";
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      let apiPositionUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiPositionKey}`;
+      axios.get(apiPositionUrl).then(handleResponse);      
+    }
+
+    function handleCurrentLocation(event){
+      event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
     }
 
     if(weatherData.ready){
@@ -66,6 +82,7 @@ export default function Weather(props) {
               <button
                 type="button"
                 className="btn btn-outline-success w-100 shadow sm"
+                onClick={handleCurrentLocation}
               >
                 Current
               </button>
@@ -74,7 +91,8 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} /> 
         <hr />
-        <WeatherForecast city={weatherData.city} />
+        <h2>Weather Forecast for week </h2> 
+        <WeatherForecast lat={weatherData.lat} lon={weatherData.lon} />
         
       </div>        
     );

@@ -2,7 +2,7 @@ import React from "react";
 
 
 export default function CurrentDate(props){
-    console.log(props.date);
+    
     let days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let day=days[props.date.getDay()];
     let hours=props.date.getHours();
@@ -14,6 +14,6 @@ export default function CurrentDate(props){
         minutes=`0${minutes}`;
     }
 return(<div>
-    {day} {hours}:{minutes}
+   Last update: <span>{day} {hours}:{minutes}</span> 
 </div>)
 }
